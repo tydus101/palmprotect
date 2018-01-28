@@ -30,7 +30,7 @@ body {
 }
 
 
-img{
+#image img{
     height: 180px;
     display: block;
     margin: auto
@@ -94,8 +94,28 @@ md-content .inputTextbox{
     opacity: 1;
 }
 
-/*Result*/
-p1,p2{
+/*Panel 2*/
+.panel2 .md-content2{
+    width: 100%;
+    margin: 0;
+}
+
+.happy .container_p{
+    width: 50%;
+    float: right;
+    margin-top: 50px;
+}
+
+.happy img{
+    width: 50%;
+}
+.happy p{
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+
+.happy .container_p p1{
     font-family: 'Indie Flower', cursive;
 }
 

@@ -15,8 +15,10 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 </head>
 <body ng-controller="palmAppController">
-<div class="centerLogo" >
-    <img src="assets/images/LOGO2.png">
+<div class="top">
+    <div id="image" >
+        <img src="assets/images/LOGO2.png">
+    </div>
 </div>
 
 <div class="panel" ng-if="currentPage==='start'">
@@ -27,22 +29,34 @@
                 <input ng-model="term">
             </md-input-container>
             <md-button class="md-flat" ng-click="searchFood(term)">Search</md-button>
+        </div>
+
+    </md-content>
+</div>
+<div class="panel2" currentPage==='selected'>
+    <md-content class="md-content2">
+        <div class="happy" ng-if="!hasPalm">
+            <img src="assets/images/happypalm.png">
+            <div class="container_p">
+                <p>PALM OIL FREE :)<br><br></p>
+                <div class="description">
+                    <p1>Description</p1>
+                </div>
+            </div>
 
         </div>
-        <div id="displayPalms">
-            <div ng-show="isHappyOrSad() == 'true'">
-                <p1>PALM OIL FREE :)</p1>
-                <img src="assets/images/happypalm.png">
-            </div>
-            <div ng-show="isHappyOrSad() == 'false'">
-                <p2>There is palm oil in this product :(</p2>
-                <img src="assets/images/sadpalm.png">
-            </div>
+        <div class="sad" ng-if=hasPalm">
+            <img src="assets/images/sadpalm.png">
         </div>
     </md-content>
 </div>
 
-    <img src="assets/images/forest.png" class="homeImage land" ng-if="currentPage==='start'">
+<div class="bottom">
+    <div id="homeImage">
+        <img src="assets/images/forest.png" class="homeImage land" ng-if="currentPage==='start'">
+    </div>
+</div>
+
 
 
 

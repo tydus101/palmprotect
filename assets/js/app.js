@@ -1,21 +1,12 @@
 var palm_app = angular.module('palmApp', ['ngMaterial', 'ngAnimate']);
 
 palm_app.controller('palmAppController', function ($scope, $http, $location) {
-    var isHappyOrSad = function () {
-        $scope.isHappyOrSad = function () {
-            if(hasPalmOil(value)){
-                return "true";
-            }
-            else{
-                return "false";
-            }
-        }
-    };
+
+
     // Is the first ground in the page hidden?
     params = $location.search();
     if (params.dbid) {
         $scope.currentPage = 'selected';
-        isHappyOrSad();
     }
     else{
         $scope.currentPage = 'start';

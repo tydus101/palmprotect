@@ -1,8 +1,8 @@
-var palm_app = angular.module('palmApp', ['ngMaterial', 'ngAnimate']);
+var palm_app = angular.module('palmApp', ['ngMaterial', 'ngAnimate', 'ngMessages']);
 
 palm_app.controller('palmAppController', function ($scope, $http, $location) {
 
-
+    $scope.error_msg = '';
     // Is the first ground in the page hidden?
     params = $location.search();
     if (params.dbid) {
@@ -28,6 +28,8 @@ palm_app.controller('palmAppController', function ($scope, $http, $location) {
             $scope.hasPalm = hasPalmOil(value);
             console.log($scope.hasPalm);
             console.log($scope.currentPage);
+        }, function (reason) {
+
         })
     };
 

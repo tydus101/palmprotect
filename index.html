@@ -30,12 +30,12 @@
 
         </div>
         <div id="displayPalms">
-            <div ng-show="isHappyOrSad()">
-                <p>PALM OIL FREE :)</p>
+            <div ng-show="isHappyOrSad() == 'true'">
+                <p1>PALM OIL FREE :)</p1>
                 <img src="assets/images/happypalm.png">
             </div>
-            <div ng-show="!isHappyOrSad()">
-                <p>There is palm oil in this product :(</p>
+            <div ng-show="isHappyOrSad() == 'false'">
+                <p2>There is palm oil in this product :(</p2>
                 <img src="assets/images/sadpalm.png">
             </div>
         </div>

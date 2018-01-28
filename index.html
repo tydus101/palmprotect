@@ -40,24 +40,29 @@
             <div class="container_p">
                 <p>PALM OIL FREE :)<br><br></p>
                 <div class="description">
-                    <p1>Description</p1>
+                    <p1>Your product is completely free of palm oil and is rain forest safe. Enjoy!</p1>
                 </div>
+                <md-button class="md-flat" ng-click="submitAnother()">Submit another..</md-button>
+
             </div>
         </div>
-        <div class="sad" ng-if="hasPalm">
+        <div class="happy" ng-if="hasPalm">
             <img src="assets/images/sadpalm.png">
             <div class="container_p">
                 <p>This product contains <br>palm oil :(</p>
                 <div class="description">
-                    <p1>Description</p1>
+                    <p1>Your product contains a valuable resource that if unsuitably obtained can contribute
+                    significantly to the removal of the world's rain forests. You should do further research to ensure
+                    the producing company uses sustainable and ethical obtained palm oil.</p1>
                 </div>
-                <div class="inputTextbox_2">
-                    <md-input-container>
-                        <label>Enter another food</label>
-                        <input ng-model="term">
-                    </md-input-container>
-                    <md-button class="md-flat" ng-click="searchFood(term)">Search</md-button>
-                </div>
+                <md-button class="md-flat" ng-click="submitAnother()">Submit another..</md-button>
+                <!--<div class="inputTextbox_2">-->
+                    <!--<md-input-container>-->
+                        <!--<label>Enter another food</label>-->
+                        <!--<input ng-model="term">-->
+                    <!--</md-input-container>-->
+                    <!--<md-button class="md-flat" ng-click="searchFood(term)">Search</md-button>-->
+                <!--</div>-->
             </div>
         </div>
     </md-content>

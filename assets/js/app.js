@@ -72,6 +72,10 @@ var hasPalmOil = function (json){
     })
 
 }
+    $scope.submitAnother = function () {
+        $location.search('dbid', null);
+        $scope.currentPage = 'start';
+    }
 
 
 

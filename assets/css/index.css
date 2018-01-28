@@ -3,6 +3,7 @@ body {
     background-color: #F5FFFA;
     margin: auto;
     padding: 0;
+    overflow: hidden;
 }
 
 .homeImage {
@@ -109,7 +110,8 @@ md-content .inputTextbox{
 }
 
 .happy img{
-    width: 50%;
+    width: 37%;
+    margin-left: 100px;
 }
 .happy p{
     font-family: 'Indie Flower', cursive;
@@ -130,7 +132,8 @@ md-content .inputTextbox{
 }
 
 .sad img{
-    width: 50%;
+    width: 37%;
+    margin-left: 100px;
 }
 .sad p{
     font-family: 'Indie Flower', cursive;
@@ -138,8 +141,14 @@ md-content .inputTextbox{
     text-align: center;
 }
 
-.sad .container_p p1{
+.sad .container_p p1 {
     font-family: 'Indie Flower', cursive;
+}
+
+.inputTextbox_2{
+    width: 100%;
+    margin-left: 185px;
+    margin-top: 40px;
 }
 /*Media Queries*/
 

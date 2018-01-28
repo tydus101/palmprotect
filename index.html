@@ -51,6 +51,13 @@
                 <div class="description">
                     <p1>Description</p1>
                 </div>
+                <div class="inputTextbox_2">
+                    <md-input-container>
+                        <label>Enter another food</label>
+                        <input ng-model="term">
+                    </md-input-container>
+                    <md-button class="md-flat" ng-click="searchFood(term)">Search</md-button>
+                </div>
             </div>
         </div>
     </md-content>

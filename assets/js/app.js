@@ -32,7 +32,7 @@ palm_app.controller('palmAppController', function ($scope, $http, $location) {
             console.log(value);
             console.log($scope.currentPage);
         }, function (reason) {
-
+            error_msg = 'Failed to make API request.';
         })
     };
 
@@ -66,7 +66,9 @@ palm_app.controller('palmAppController', function ($scope, $http, $location) {
         return pattern.test(ingredient_string)
     };
 
-    $scope.searchFood = function (term) {
+    $scope.searchFood = function (form) {
+        console.log(form.term.$error);
+        term = form.term.$modelValue;
         var search = $http.get('https://api.nal.usda.gov/ndb/search/?' +
         'format=json&' +
         'q=' + term + '&' +
@@ -75,10 +77,16 @@ palm_app.controller('palmAppController', function ($scope, $http, $location) {
         'ds=Branded Food Products')
         .then(function (result) {
             console.log(result);
-            parseNdbId(result.data.list.item[0].ndbno);
+            try {
+                parseNdbId(result.data.list.item[0].ndbno);
+                form.term.$error.validationError = false;
+            }
+            catch(err) {
+                form.term.$error.validationError = true;
+            }
     })
 
-}
+};
     $scope.submitAnother = function () {
         $location.search('dbid', null);
         $scope.currentPage = 'start';

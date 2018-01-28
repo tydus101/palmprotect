@@ -27,13 +27,24 @@
     <md-content md-theme="docs-dark" layout-gt-sm="row">
         <div class="inputTextbox">
             <md-input-container>
+            <form name="userForm" ng-submit="searchFood(userForm)">
+                <md-input-container>
                 <label>Enter keyword/UPC</label>
-                <input ng-model="term">
-                <div ng-messages="userForm.social.$error" ng-if="error_msg">
-                    <div ng-message>{{error_msg}}</div>
-                </div>
-            </md-input-container>
-            <md-button class="md-flat" ng-click="searchFood(term)">Search</md-button>
+                <input name='term' ng-model="term" >
+                    <div ng-messages="userForm.term.$error" role="alert">
+                        <div ng-message="validationError">
+                            <p >
+                                No search results were returned.
+                            </p>
+                        </div>
+                    </div>
+                </md-input-container>
+                <md-button class="md-flat" type="submit">Search</md-button>
+
+            </form>
+
+
+
         </div>
 
     </md-content>

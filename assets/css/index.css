@@ -143,6 +143,17 @@ md-content .inputTextbox{
     text-align: center;
 }
 
+.happy h2{
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.happy strong{
+    font-weight: bold;
+}
+
 .happy .container_p p1{
     font-family: 'Indie Flower', cursive;
 }
@@ -176,6 +187,8 @@ md-content .inputTextbox{
     margin-left: 185px;
     margin-top: 40px;
 }
+
+
 /*Media Queries*/
 
 @media (max-width: 1040px) {

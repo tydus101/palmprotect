@@ -31,17 +31,30 @@
             <md-button class="md-flat" ng-click="searchFood(term)">Search</md-button>
 
         </div>
-        <div id="displayPalms">
-            <div ng-show="isHappyOrSad() == 'true'">
-                <p1>PALM OIL FREE :)</p1>
-                <img src="assets/images/happypalm.png">
-            </div>
-            <div ng-show="isHappyOrSad() == 'false'">
-                <p2>There is palm oil in this product :(</p2>
-                <img src="assets/images/sadpalm.png">
-            </div>
-        </div>
+        <!--<div id="displayPalms">-->
+            <!--<div ng-show="isHappyOrSad() === 'true'">-->
+                <!--<p1>PALM OIL FREE :)</p1>-->
+                <!--<img src="assets/images/happypalm.png">-->
+            <!--</div>-->
+            <!--<div ng-show="isHappyOrSad() === 'false'">-->
+                <!--<p2>There is palm oil in this product :(</p2>-->
+                <!--<img src="assets/images/sadpalm.png">-->
+            <!--</div>-->
+        <!--</div>-->
+
+
     </md-content>
+
+</div>
+<div ng-if="currentPage==='selected'">
+    <img src="assets/images/happypalm.png"  ng-if="!hasPalm">
+</div>
+<div ng-if="currentPage==='selected'">
+    <img src="assets/images/sadpalm.png"  ng-if="hasPalm">
+</div>
+
+
+
 </div>
 
     <img src="assets/images/forest.png" class="homeImage land" ng-if="currentPage==='start'">

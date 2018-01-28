@@ -71,10 +71,10 @@ md-content .inputTextbox{
 /*Media Queries*/
 
 @media (max-width: 1040px) {
-    .inputTextbox{
+    md-content .inputTextbox{
         margin: 0;
     }
-    .md-flat{
+    md-content .md-flat{
         float: right;
     }
     md-button{

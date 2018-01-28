@@ -24,6 +24,10 @@ body {
     margin: auto;
     padding: 10px;
 }
+.homeImage.ng_hide {
+    animation: hideGround;
+    animation-duration: 4s;
+}
 
 img{
     height: 180px;
@@ -44,12 +48,15 @@ md-content .inputTextbox{
 }
 
 
-@keyframes hideForm {
+/* Animations */
+
+@keyframes hideGround {
     from {
-        height: 100px;
+        transform : scale(1) translateY(-100%);
+        opacity : 1;
     }
     to {
-        height: 0;
-
+        transform : scale(1) translateY(100%);
+        opacity : 0.25;
     }
 }

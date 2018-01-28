@@ -1,11 +1,24 @@
 /*Body*/
 body {
+
+    margin: auto;
+    padding: 0;
+}
+
+.homeImage {
     background-image: url("../images/forest.png");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size:1650px, 1080px;
-    margin: auto;
+    height: 100%;
+    width: 100%;
+    margin: 0;
     padding: 0;
+    position: absolute;
+}
+.homeImage.ng_hide {
+    animation: hideGround;
+    animation-duration: 4s;
 }
 
 
@@ -18,4 +31,18 @@ md-content {
 md-content .inputTextbox{
     width: 50%;
     margin: auto;
+}
+
+
+/* Animations */
+
+@keyframes hideGround {
+    from {
+        transform : scale(1) translateY(-100%);
+        opacity : 1;
+    }
+    to {
+        transform : scale(1) translateY(100%);
+        opacity : 0.25;
+    }
 }

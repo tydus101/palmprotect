@@ -11,9 +11,15 @@ palm_app.controller('palmAppController', function ($scope, $http) {
         'format=json&' +
         'api_key=YyAhPMz3MUxL5X1r2jhdo5rFtavN95Iqe7wNVCHL').then(function (value) {
             //console.log(value)
-        console.log(hasPalmOil(value))
+        console.log(productName(value));
+        console.log(hasPalmOil(value));
     })
 };
+
+var productName = function (json){
+    all_names = json.data.report.food.name
+    return all_names.split(",")[0];
+}
 
 var hasPalmOil = function (json){
     console.log(json.data.report.food.ing.desc)

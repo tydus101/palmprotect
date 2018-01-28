@@ -98,7 +98,7 @@ md-content .inputTextbox{
     opacity: 1;
 }
 
-/*Panel 2*/
+/*Panel 2 happy*/
 .panel2 .md-content2{
     width: 100%;
     margin: 0;
@@ -123,6 +123,26 @@ md-content .inputTextbox{
     font-family: 'Indie Flower', cursive;
 }
 
+/*Panel 2 sad*/
+
+.sad .container_p{
+    width: 50%;
+    float: right;
+    margin-top: 50px;
+}
+
+.sad img{
+    width: 50%;
+}
+.sad p{
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+
+.sad .container_p p1{
+    font-family: 'Indie Flower', cursive;
+}
 /*Media Queries*/
 
 @media (max-width: 1040px) {

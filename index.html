@@ -33,7 +33,7 @@
 
     </md-content>
 </div>
-<div class="panel2" currentPage==='selected'>
+<div class="panel2" ng-if="currentPage==='selected'">
     <md-content class="md-content2">
         <div class="happy" ng-if="!hasPalm">
             <img src="assets/images/happypalm.png">
@@ -43,10 +43,15 @@
                     <p1>Description</p1>
                 </div>
             </div>
-
         </div>
-        <div class="sad" ng-if=hasPalm">
+        <div class="sad" ng-if="hasPalm">
             <img src="assets/images/sadpalm.png">
+            <div class="container_p">
+                <p>This product contains <br>palm oil :(</p>
+                <div class="description">
+                    <p1>Description</p1>
+                </div>
+            </div>
         </div>
     </md-content>
 </div>

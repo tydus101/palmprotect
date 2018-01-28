@@ -36,6 +36,13 @@ body {
     display: block;
     margin: auto
 }
+.aboutUs{
+    position: absolute;
+}
+.aboutUs .md-flat{
+    font-size: 20px;
+
+}
 /*Search button*/
 .md-flat{
     font-family: 'Indie Flower', cursive;
@@ -175,19 +182,25 @@ md-content .inputTextbox{
 .sad p{
     font-family: 'Indie Flower', cursive;
     font-size: 30px;
-    text-align: center;
+    font-weight: normal;
 }
-
-.sad .container_p p1 {
-    font-family: 'Indie Flower', cursive;
+.description{
+    text-align: center;
+    width: 80%;
+    margin-left: 65px;
 }
 
 .inputTextbox_2{
-    width: 100%;
-    margin-left: 185px;
+    width: 50%;
+    margin-left: 260px;
     margin-top: 40px;
 }
 
+
+.container_p .md-flat {
+    width: 50%;
+    margin-left: 160px;
+}
 
 /*Media Queries*/
 

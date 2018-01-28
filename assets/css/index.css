@@ -33,7 +33,17 @@ img{
     display: block;
     margin: auto
 }
+/*Search button*/
+.md-flat{
+    font-family: 'Indie Flower', cursive;
+    opacity: .54;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
 
+label{
+    font-family: 'Indie Flower', cursive;
+}
 /*Input text box*/
 md-content {
     width: 50%;
@@ -62,6 +72,20 @@ md-content .inputTextbox{
 .land.ng-leave {
     transition:1s all;
     opacity: 1;
+}
+/*Media Queries*/
+
+@media (max-width: 1040px) {
+    md-content .inputTextbox{
+        margin: 0;
+    }
+    md-content .md-flat{
+        float: right;
+    }
+    md-button{
+        float: right;
+    }
+
 }
 .land.ng-leave.ng-leave-active {
     transition:1s linear all;

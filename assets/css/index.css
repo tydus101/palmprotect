@@ -68,7 +68,6 @@ md-content .inputTextbox{
         opacity : 0.25;
     }
 }
-
 /*Media Queries*/
 
 @media (max-width: 1040px) {
@@ -76,7 +75,7 @@ md-content .inputTextbox{
         margin: 0;
     }
     .md-flat{
-    float: right;
+        float: right;
     }
     md-button{
         float: right;

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="icon" href="assets/images/favicon.ico">
 </head>
 <body ng-controller="palmAppController">
 <div class="top">
@@ -40,20 +41,24 @@
             <div class="container_p">
                 <p>PALM OIL FREE :)<br><br></p>
                 <div class="description">
-                    <p1>Description</p1>
+                    <p1>Your product is completely free of palm oil and is rain forest safe. Enjoy!</p1>
                 </div>
+                <md-button class="md-flat" ng-click="submitAnother()">Submit another..</md-button>
+
             </div>
         </div>
-        <div class="sad" ng-if="hasPalm">
+        <div class="happy" ng-if="hasPalm">
             <img src="assets/images/sadpalm.png">
             <div class="container_p">
                 <p>This product contains <br>palm oil :(</p>
+                <h2><strong>{{product_name}}</strong> | {{manufacturer_name}}</h2>
                 <div class="description">
-                    <p1>Description</p1>
+                    <p1>Your product contains a valuable resource that if unsuitably obtained can contribute
+                    significantly to the removal of the world's rain forests. You should do further research to ensure
+                    the producing company uses sustainable and ethically obtained palm oil.</p1>
                 </div>
-                <div class="inputTextbox_2">
-                    <md-button class="md-flat" ng-click="searchFood(term)">Again?</md-button>
-                </div>
+
+                <md-button class="md-flat" ng-click="submitAnother()">Submit another..</md-button>
             </div>
         </div>
     </md-content>

@@ -59,6 +59,9 @@ md-content .inputTextbox{
     margin-left: 185px;
 }
 
+
+
+
 /* Animations */
 .land.ng-enter {
     transition: 1s ease-in all;
@@ -86,10 +89,12 @@ md-content .inputTextbox{
 }
 
 .panel.ng-enter {
+    transition-delay: 0.5s;
     transition:1s ease-in all;
     opacity: 0;
 }
 .panel.ng-enter-active {
+    transition-delay: 0.5s;
     transition:1s ease-in all;
     opacity: 1;
 }
@@ -98,6 +103,28 @@ md-content .inputTextbox{
 .panel2 .md-content2{
     width: 100%;
     margin: 0;
+}
+
+.panel2.ng-leave {
+    transition:0.5s ease-in all;
+    opacity: 1;
+}
+.panel2.ng-leave.ng-leave-active {
+
+    transition:0.5s ease-in all;
+    opacity: 0;
+}
+
+.panel2.ng-enter.ng-enter-active {
+    transition-delay: 1.5s;
+    transition:0.5s ease-in all;
+    opacity: 0;
+}
+
+.panel2.ng-enter {
+    transition-delay: 1.5s;
+    transition:0.5s ease-in all;
+    opacity: 0;
 }
 
 .happy .container_p{
@@ -116,9 +143,22 @@ md-content .inputTextbox{
     text-align: center;
 }
 
+.happy h2{
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.happy strong{
+    font-weight: bold;
+}
+
 .happy .container_p p1{
     font-family: 'Indie Flower', cursive;
 }
+
+.
 
 /*Panel 2 sad*/
 
@@ -147,6 +187,8 @@ md-content .inputTextbox{
     margin-left: 260px;
     margin-top: 40px;
 }
+
+
 /*Media Queries*/
 
 @media (max-width: 1040px) {

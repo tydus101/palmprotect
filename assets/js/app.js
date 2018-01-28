@@ -26,6 +26,7 @@ palm_app.controller('palmAppController', function ($scope, $http, $location) {
             $scope.currentPage = 'selected';
             $location.search('dbid', id);
             $scope.hasPalm = hasPalmOil(value);
+            $scope.product_name = productName(value)
             console.log($scope.hasPalm);
             console.log($scope.currentPage);
         })
@@ -49,8 +50,6 @@ var productName = function (json){
     all_names = json.data.report.food.name
     return all_names.split(",")[0];
 };
-
-
 
 var hasPalmOil = function (json){
     console.log(json.data.report.food.ing.desc)

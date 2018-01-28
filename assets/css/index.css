@@ -143,6 +143,13 @@ md-content .inputTextbox{
     text-align: center;
 }
 
+.happy h2{
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    text-align: center;
+    text-weight: bold;
+}
+
 .happy .container_p p1{
     font-family: 'Indie Flower', cursive;
 }

@@ -36,8 +36,12 @@ body {
     display: block;
     margin: auto
 }
+.aboutUs{
+    position: absolute;
+}
 .aboutUs .md-flat{
     font-size: 20px;
+
 }
 /*Search button*/
 .md-flat{

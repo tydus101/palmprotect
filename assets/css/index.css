@@ -6,16 +6,14 @@ body {
 }
 
 .homeImage {
-    background-image: url("../images/forest2.png");
+    background-image: url("../images/forest5.png");
     background-repeat: no-repeat;
-    background-position: center ;
-    background-size:1000px, 500px;
-    height: 100%;
+    background-position: center bottom;
     width: 100%;
+    height: 50%;
     margin: 0;
     padding: 0;
-    position: fixed;
-    bottom: -120px;
+    position: relative;
 }
 
 /*Center Logo*/
@@ -34,7 +32,17 @@ img{
     display: block;
     margin: auto
 }
+/*Search button*/
+.md-flat{
+    font-family: 'Indie Flower', cursive;
+    opacity: .54;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
 
+label{
+    font-family: 'Indie Flower', cursive;
+}
 /*Input text box*/
 md-content {
     width: 50%;
@@ -59,4 +67,19 @@ md-content .inputTextbox{
         transform : scale(1) translateY(100%);
         opacity : 0.25;
     }
+}
+
+/*Media Queries*/
+
+@media (max-width: 1040px) {
+    .inputTextbox{
+        margin: 0;
+    }
+    .md-flat{
+    float: right;
+    }
+    md-button{
+        float: right;
+    }
+
 }

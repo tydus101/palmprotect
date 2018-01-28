@@ -7,6 +7,7 @@ palm_app.controller('palmAppController', function ($scope, $http, $location) {
     params = $location.search();
     if (params.dbid) {
         $scope.currentPage = 'selected';
+        
     }
     else{
         $scope.currentPage = 'start';

@@ -2,7 +2,7 @@
 <html lang="en" ng-app="palmApp">
 <head>
     <meta charset="UTF-8">
-    <title>TestyMcTestface</title>
+    <title>Home | Palm Protect</title>
     <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/angular-animate/angular-animate.js"></script>
     <script src="node_modules/angular-aria/angular-aria.js"></script>
@@ -14,10 +14,14 @@
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body ng-controller="palmAppController">
+<div class="centerLogo">
+    <img src="assets/images/LOGO2.png">
+</div>
+
     <md-content md-theme="docs-dark" layout-gt-sm="row">
         <div class="inputTextbox">
             <md-input-container>
-                <label>Title</label>
+                <label>Enter food</label>
                 <input ng-model="term">
             </md-input-container>
             <md-button class="md-raised" ng-click="searchFood(term)">Search</md-button>

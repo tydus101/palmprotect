@@ -1,27 +1,41 @@
 /*Body*/
 body {
-
+    background-color: #F5FFFA;
     margin: auto;
     padding: 0;
 }
 
 .homeImage {
-    background-image: url("../images/forest.png");
+    background-image: url("../images/forest2.png");
     background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size:1650px, 1080px;
+    background-position: center ;
+    background-size:1000px, 500px;
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-    position: absolute;
+    position: fixed;
+    bottom: -120px;
 }
 
+/*Center Logo*/
+.centerLogo{
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+
+img{
+    height: 180px;
+    display: block;
+    margin: auto
+}
 
 /*Input text box*/
 md-content {
     width: 50%;
     margin: auto;
+    background-color: #F5FFFA;
 }
 
 md-content .inputTextbox{

@@ -34,9 +34,6 @@ palm_app.controller('palmAppController', function ($scope, $http, $location) {
         })
     };
 
-
-
-
     if (params.dbid) {
         parseNdbId(params.dbid);
         $scope.currentPage = 'selected';
@@ -53,7 +50,11 @@ palm_app.controller('palmAppController', function ($scope, $http, $location) {
 
     var productName = function (json){
         all_names = json.data.report.food.name;
-        return all_names.split(",")[0];
+        first_name = all_names.split(",")[0];
+        second_name = all_names.split(",")[1];
+
+        var pattern = /^[^\s]*(\s[^\s]*){0,2}/i
+        return pattern.exec(first_name)[0] + " " + pattern.exec(second_name)[0];
     };
 
     var hasPalmOil = function (json){

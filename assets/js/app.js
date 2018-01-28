@@ -13,21 +13,36 @@ palm_app.controller('palmAppController', function ($scope, $http, $location) {
     }
 
 
+    // Does the product have palm oil?
+    $scope.hasPalm = false;
+    console.log(params);
     // If there
     var parseNdbId = function (id) {
-    var result = $http.get('https://api.nal.usda.gov/ndb/reports/?' +
-        'ndbno=' + id + '&' +
-        'type=b&' +
-        'format=json&' +
-        'api_key=YyAhPMz3MUxL5X1r2jhdo5rFtavN95Iqe7wNVCHL').then(function (value) {
+        var result = $http.get('https://api.nal.usda.gov/ndb/reports/?' +
+            'ndbno=' + id + '&' +
+            'type=b&' +
+            'format=json&' +
+            'api_key=YyAhPMz3MUxL5X1r2jhdo5rFtavN95Iqe7wNVCHL').then(function (value) {
             $scope.currentPage = 'selected';
             $location.search('dbid', id);
-            console.log(value);
-            //console.log(value)
-        console.log(productName(value));
-        console.log(hasPalmOil(value));
-    })
+            $scope.hasPalm = hasPalmOil(value);
+            console.log($scope.hasPalm);
+            console.log($scope.currentPage);
+        })
     };
+
+
+
+
+    if (params.dbid) {
+        parseNdbId(params.dbid);
+        $scope.currentPage = 'selected';
+    }
+    else{
+        $scope.currentPage = 'start';
+    }
+
+
 
 
 var productName = function (json){

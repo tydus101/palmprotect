@@ -58,6 +58,10 @@ md-content .inputTextbox{
     margin-left: 185px;
 }
 
+. {
+
+}
+
 
 /* Animations */
 .land.ng-enter {
@@ -134,7 +138,7 @@ md-content .inputTextbox{
 
 }
 .land.ng-leave.ng-leave-active {
-    transition:1s ease-in all;
+    transition: 1s ease-in all;
     bottom: -300px;
     opacity: 0.25;
 }

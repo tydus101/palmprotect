@@ -182,11 +182,12 @@ md-content .inputTextbox{
 .sad p{
     font-family: 'Indie Flower', cursive;
     font-size: 30px;
-    text-align: center;
+    font-weight: normal;
 }
-
-.sad .container_p p1 {
-    font-family: 'Indie Flower', cursive;
+.description{
+    text-align: center;
+    width: 80%;
+    margin-left: 65px;
 }
 
 .inputTextbox_2{
@@ -195,6 +196,11 @@ md-content .inputTextbox{
     margin-top: 40px;
 }
 
+
+.container_p .md-flat {
+    width: 50%;
+    margin-left: 160px;
+}
 
 /*Media Queries*/
 

@@ -22,10 +22,12 @@ body {
 .centerLogo{
     margin: auto;
     padding: 10px;
-
-
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
-
 
 
 img{
@@ -52,8 +54,8 @@ md-content {
 }
 
 md-content .inputTextbox{
-    width: 50%;
-    margin: auto;
+    width: 100%;
+    margin-left: 185px;
 }
 
 
@@ -91,6 +93,12 @@ md-content .inputTextbox{
     transition:1s ease-in all;
     opacity: 1;
 }
+
+/*Result*/
+p1,p2{
+    font-family: 'Indie Flower', cursive;
+}
+
 /*Media Queries*/
 
 @media (max-width: 1040px) {

@@ -1,0 +1,48 @@
+body{
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    background-image: url("../images/about.png");
+    background-color: #F5FFFA;
+
+}
+
+
+/*Center logo*/
+.image img{
+    height: 180px;
+    display: block;
+    margin: auto
+}
+
+.center{
+    width: 100%;
+}
+
+.homeImage img{
+    width: 100%;
+    height: auto;
+    float: bottom;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    position: absolute;
+    margin-bottom: -40px;
+}
+
+.aboutParagraph {
+    width: 50%;
+    margin-left: 25%;
+    position: relative;
+    z-index: 1;
+
+}
+.aboutParagraph p{
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    opacity: .90;
+}

@@ -1,12 +1,11 @@
 /*Body*/
 body {
-
+    background-color: #F5FFFA;
     margin: auto;
     padding: 0;
 }
 
 .homeImage {
-
     width: 70%;
     height: auto;
     float: bottom;
@@ -17,6 +16,15 @@ body {
     right: 0;
     display: block;
     position: absolute;
+}
+
+/*Center Logo*/
+.centerLogo{
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+
+
 }
 .homeImage.ng-enter {
     transition: 1s linear all;
@@ -40,11 +48,17 @@ body {
 }
 
 
+img{
+    height: 180px;
+    display: block;
+    margin: auto
+}
 
 /*Input text box*/
 md-content {
     width: 50%;
     margin: auto;
+    background-color: #F5FFFA;
 }
 
 md-content .inputTextbox{

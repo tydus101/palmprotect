@@ -3,14 +3,14 @@ var palm_app = angular.module('palmApp', ['ngMaterial', 'ngAnimate']);
 palm_app.controller('palmAppController', function ($scope, $http) {
 
     // Is the first ground in the page hidden?
-    $scope.groundOneHidden = false;
+    $scope.groundOneShow = true;
     var parseNdbId = function (id) {
     var result = $http.get('https://api.nal.usda.gov/ndb/reports/?' +
         'ndbno=' + id + '&' +
         'type=b&' +
         'format=json&' +
         'api_key=YyAhPMz3MUxL5X1r2jhdo5rFtavN95Iqe7wNVCHL').then(function (value) {
-
+            $scope.groundOneShow = false;
             console.log(value)
             //console.log(value)
         console.log(productName(value));

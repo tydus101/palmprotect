@@ -3,7 +3,6 @@ var palm_app = angular.module('palmApp', ['ngMaterial']);
 palm_app.controller('palmAppController', function ($scope, $http) {
 
 
-
 $scope.searchFood = function (term) {
     var search = $http.get('https://api.nal.usda.gov/ndb/search/?' +
         'format=json&' +
@@ -14,6 +13,7 @@ $scope.searchFood = function (term) {
         .then(function (result) {
             console.log(result)
     })
+
 }
 
 

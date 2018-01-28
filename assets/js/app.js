@@ -15,8 +15,17 @@ palm_app.controller('palmAppController', function ($scope, $http) {
             //console.log(value)
         console.log(productName(value));
         console.log(hasPalmOil(value));
+        $scope.isHappyOrSad = function () {
+            if(hasPalmOil(value)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
     })
     };
+
 
 var productName = function (json){
     all_names = json.data.report.food.name

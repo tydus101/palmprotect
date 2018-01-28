@@ -28,8 +28,15 @@
                 <md-button class="md-flat" ng-click="searchFood(term)">Search</md-button>
 
         </div>
-        <div id="result">
-
+        <div id="displayPalms">
+            <div ng-show="isHappyOrSad()">
+                <p>PALM OIL FREE :)</p>
+                <img src="assets/images/happypalm.png">
+            </div>
+            <div ng-show="!isHappyOrSad()">
+                <p>There is palm oil in this product :(</p>
+                <img src="assets/images/sadpalm.png">
+            </div>
         </div>
 
 

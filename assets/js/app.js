@@ -26,8 +26,10 @@ palm_app.controller('palmAppController', function ($scope, $http, $location) {
             $scope.currentPage = 'selected';
             $location.search('dbid', id);
             $scope.hasPalm = hasPalmOil(value);
-            $scope.product_name = productName(value)
+            $scope.product_name = productName(value);
+            $scope.manufacturer_name = manufacturerName(value);
             console.log($scope.hasPalm);
+            console.log(value);
             console.log($scope.currentPage);
         })
     };
@@ -44,19 +46,22 @@ palm_app.controller('palmAppController', function ($scope, $http, $location) {
     }
 
 
+    var manufacturerName = function(json){
+        manufacturer = json.data.report.food.manu;
+        return manufacturer;
+    };
 
+    var productName = function (json){
+        all_names = json.data.report.food.name;
+        return all_names.split(",")[0];
+    };
 
-var productName = function (json){
-    all_names = json.data.report.food.name
-    return all_names.split(",")[0];
-};
-
-var hasPalmOil = function (json){
-    console.log(json.data.report.food.ing.desc)
-    var pattern = /(palm[^,]*oil)|(oil[^,]*palm)|(oil[^,].*\(.*palm.*\))/i
-    ingredient_string = json.data.report.food.ing.desc
-    return pattern.test(ingredient_string)
-};
+    var hasPalmOil = function (json){
+        console.log(json.data.report.food.ing.desc)
+        var pattern = /(palm[^,]*oil)|(oil[^,]*palm)|(oil[^,].*\(.*palm.*\))/i
+        ingredient_string = json.data.report.food.ing.desc
+        return pattern.test(ingredient_string)
+    };
 
     $scope.searchFood = function (term) {
         var search = $http.get('https://api.nal.usda.gov/ndb/search/?' +

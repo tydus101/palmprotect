@@ -50,13 +50,14 @@
         <div class="happy" ng-if="hasPalm">
             <img src="assets/images/sadpalm.png">
             <div class="container_p">
-                <h2>{{product_name}}</h2>
                 <p>This product contains <br>palm oil :(</p>
+                <h2><strong>{{product_name}}</strong> | {{manufacturer_name}}</h2>
                 <div class="description">
                     <p1>Your product contains a valuable resource that if unsuitably obtained can contribute
                     significantly to the removal of the world's rain forests. You should do further research to ensure
                     the producing company uses sustainable and ethically obtained palm oil.</p1>
                 </div>
+
                 <md-button class="md-flat" ng-click="submitAnother()">Submit another..</md-button>
                 <!--<div class="inputTextbox_2">-->
                     <!--<md-input-container>-->

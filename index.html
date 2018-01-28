@@ -6,6 +6,7 @@
     <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/angular-animate/angular-animate.js"></script>
     <script src="node_modules/angular-aria/angular-aria.js"></script>
+    <script src="node_modules/angular-messages/angular-messages.js"></script>
     <script src="node_modules/angular-material/angular-material.min.js"></script>
     <script src="assets/js/app.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
@@ -29,8 +30,11 @@
     <md-content md-theme="docs-dark" layout-gt-sm="row">
         <div class="inputTextbox">
             <md-input-container>
-                <label>Enter food</label>
+                <label>Enter keyword/UPC</label>
                 <input ng-model="term">
+                <div ng-messages="userForm.social.$error" ng-if="error_msg">
+                    <div ng-message>{{error_msg}}</div>
+                </div>
             </md-input-container>
             <md-button class="md-flat" ng-click="searchFood(term)">Search</md-button>
         </div>
@@ -42,7 +46,8 @@
         <div class="happy" ng-if="!hasPalm">
             <img src="assets/images/happypalm.png">
             <div class="container_p">
-                <p>PALM OIL FREE :)<br><br></p>
+                <p>PALM OIL FREE :)<br></p>
+                <h2><strong>{{product_name}}</strong> | {{manufacturer_name}}</h2>
                 <div class="description">
                     <p1>Your product is completely free of palm oil and is rain forest safe. Enjoy!</p1>
                 </div>

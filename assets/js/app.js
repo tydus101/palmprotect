@@ -1,8 +1,8 @@
-var palm_app = angular.module('palmApp', ['ngMaterial', 'ngAnimate']);
+var palm_app = angular.module('palmApp', ['ngMaterial', 'ngAnimate', 'ngMessages']);
 
 palm_app.controller('palmAppController', function ($scope, $http, $location) {
 
-
+    $scope.error_msg = '';
     // Is the first ground in the page hidden?
     params = $location.search();
     if (params.dbid) {
@@ -32,11 +32,10 @@ palm_app.controller('palmAppController', function ($scope, $http, $location) {
             console.log($scope.hasPalm);
             console.log(value);
             console.log($scope.currentPage);
+        }, function (reason) {
+
         })
     };
-
-
-
 
     if (params.dbid) {
         parseNdbId(params.dbid);
@@ -54,7 +53,11 @@ palm_app.controller('palmAppController', function ($scope, $http, $location) {
 
     var productName = function (json){
         all_names = json.data.report.food.name;
-        return all_names.split(",")[0];
+        first_name = all_names.split(",")[0];
+        second_name = all_names.split(",")[1];
+
+        var pattern = /^[^\s]*(\s[^\s]*){0,2}/i
+        return pattern.exec(first_name)[0] + " " + pattern.exec(second_name)[0];
     };
 
     var hasPalmOil = function (json){

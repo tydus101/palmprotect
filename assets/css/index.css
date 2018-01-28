@@ -6,20 +6,39 @@ body {
 }
 
 .homeImage {
-    background-image: url("../images/forest.png");
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size:1650px, 1080px;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+
+    width: 70%;
+    height: auto;
+    float: bottom;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
     position: absolute;
 }
-.homeImage.ng_hide {
-    animation: hideGround;
-    animation-duration: 4s;
+.homeImage.ng-enter {
+    transition: 1s linear all;
+    bottom: -300px;
+    opacity: 0.25;
 }
+
+.homeImage.ng-enter.ng-enter-active {
+    transition:1s all;
+    bottom: 0;
+    opacity: 1;
+}
+.homeImage.ng-leave {
+    transition:1s all;
+    opacity: 1;
+}
+.homeImage.ng-leave.ng-leave-active {
+    transition:1s linear all;
+    bottom: -300px;
+    opacity: 0.25;
+}
+
 
 
 /*Input text box*/
@@ -36,13 +55,12 @@ md-content .inputTextbox{
 
 /* Animations */
 
-@keyframes hideGround {
-    from {
-        transform : scale(1) translateY(-100%);
-        opacity : 1;
-    }
-    to {
-        transform : scale(1) translateY(100%);
-        opacity : 0.25;
-    }
+.fade.ng-enter {
+    transition:2s linear all;
+    opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.fade.ng-enter.ng-enter-active {
+    opacity:1;
 }

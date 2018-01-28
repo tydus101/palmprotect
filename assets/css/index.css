@@ -20,7 +20,6 @@ body {
 
 /*Center Logo*/
 .centerLogo{
-    width: 50%;
     margin: auto;
     padding: 10px;
     -webkit-transition: all 0.5s ease;
@@ -37,26 +36,7 @@ body {
     transform: rotate(-10deg);
 
 }
-.homeImage.ng-enter {
-    transition: 1s linear all;
-    bottom: -300px;
-    opacity: 0.25;
-}
 
-.homeImage.ng-enter.ng-enter-active {
-    transition:1s all;
-    bottom: 0;
-    opacity: 1;
-}
-.homeImage.ng-leave {
-    transition:1s all;
-    opacity: 1;
-}
-.homeImage.ng-leave.ng-leave-active {
-    transition:1s linear all;
-    bottom: -300px;
-    opacity: 0.25;
-}
 
 
 img{
@@ -89,15 +69,38 @@ md-content .inputTextbox{
 
 
 /* Animations */
-
-.fade.ng-enter {
-    transition:2s linear all;
-    opacity:0;
+.land.ng-enter {
+    transition: 1s ease-in all;
+    bottom: -300px;
+    opacity: 0.25;
 }
 
-/* The finishing CSS styles for the enter animation */
-.fade.ng-enter.ng-enter-active {
-    opacity:1;
+.land.ng-enter.ng-enter-active {
+    transition:1s ease-in all;
+    bottom: 0;
+    opacity: 1;
+}
+.land.ng-leave {
+    transition:1s ease-in all;
+    opacity: 1;
+}
+
+.panel.ng-leave {
+    transition:1s ease-in all;
+    opacity: 1;
+}
+.panel.ng-leave-active {
+    transition:1s ease-in all;
+    opacity: 0;
+}
+
+.panel.ng-enter {
+    transition:1s ease-in all;
+    opacity: 0;
+}
+.panel.ng-enter-active {
+    transition:1s ease-in all;
+    opacity: 1;
 }
 
 /*Result*/
@@ -120,4 +123,9 @@ md-content .inputTextbox{
         float: right;
     }
 
+}
+.land.ng-leave.ng-leave-active {
+    transition:1s ease-in all;
+    bottom: -300px;
+    opacity: 0.25;
 }

@@ -1,11 +1,20 @@
 /*Body*/
 body {
+
+    margin: auto;
+    padding: 0;
+}
+
+.homeImage {
     background-image: url("../images/forest.png");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size:1650px, 1080px;
-    margin: auto;
+    height: 100%;
+    width: 100%;
+    margin: 0;
     padding: 0;
+    position: absolute;
 }
 
 
@@ -18,4 +27,15 @@ md-content {
 md-content .inputTextbox{
     width: 50%;
     margin: auto;
+}
+
+
+@keyframes hideForm {
+    from {
+        height: 100px;
+    }
+    to {
+        height: 0;
+
+    }
 }

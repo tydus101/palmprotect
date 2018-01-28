@@ -1,4 +1,21 @@
+/*Body*/
 body {
+    background-image: url("../images/forest.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size:1650px, 1080px;
     margin: auto;
     padding: 0;
+}
+
+
+/*Input text box*/
+md-content {
+    width: 50%;
+    margin: auto;
+}
+
+md-content .inputTextbox{
+    width: 50%;
+    margin: auto;
 }

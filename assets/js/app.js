@@ -3,7 +3,6 @@ var palm_app = angular.module('palmApp', ['ngMaterial']);
 palm_app.controller('palmAppController', function ($scope, $http) {
 
 
-$scope.test = "Hi";
 
 $scope.searchFood = function (term) {
     var search = $http.get('https://api.nal.usda.gov/ndb/search/?' +

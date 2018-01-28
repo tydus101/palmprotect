@@ -20,12 +20,12 @@ body {
 
 /*Center Logo*/
 .centerLogo{
-    width: 50%;
     margin: auto;
     padding: 10px;
 
 
 }
+
 
 
 img{
@@ -59,18 +59,36 @@ md-content .inputTextbox{
 
 /* Animations */
 .land.ng-enter {
-    transition: 1s linear all;
+    transition: 1s ease-in all;
     bottom: -300px;
     opacity: 0.25;
 }
 
 .land.ng-enter.ng-enter-active {
-    transition:1s all;
+    transition:1s ease-in all;
     bottom: 0;
     opacity: 1;
 }
 .land.ng-leave {
-    transition:1s all;
+    transition:1s ease-in all;
+    opacity: 1;
+}
+
+.panel.ng-leave {
+    transition:1s ease-in all;
+    opacity: 1;
+}
+.panel.ng-leave-active {
+    transition:1s ease-in all;
+    opacity: 0;
+}
+
+.panel.ng-enter {
+    transition:1s ease-in all;
+    opacity: 0;
+}
+.panel.ng-enter-active {
+    transition:1s ease-in all;
     opacity: 1;
 }
 /*Media Queries*/
@@ -88,7 +106,7 @@ md-content .inputTextbox{
 
 }
 .land.ng-leave.ng-leave-active {
-    transition:1s linear all;
+    transition:1s ease-in all;
     bottom: -300px;
     opacity: 0.25;
 }

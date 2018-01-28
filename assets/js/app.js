@@ -4,6 +4,7 @@ palm_app.controller('palmAppController', function ($scope, $http) {
 
     // Is the first ground in the page hidden?
     $scope.groundOneShow = true;
+    // If there
     var parseNdbId = function (id) {
     var result = $http.get('https://api.nal.usda.gov/ndb/reports/?' +
         'ndbno=' + id + '&' +

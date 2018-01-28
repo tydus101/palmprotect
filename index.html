@@ -15,28 +15,26 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 </head>
 <body ng-controller="palmAppController">
-<div class="centerLogo">
+<div class="centerLogo" ng-model="groundOneShow">
     <img src="assets/images/LOGO2.png">
 </div>
 
+<div class="panel" ng-if="groundOneShow">
     <md-content md-theme="docs-dark" layout-gt-sm="row">
         <div class="inputTextbox">
             <md-input-container>
                 <label>Enter food</label>
                 <input ng-model="term">
             </md-input-container>
-                <md-button class="md-flat" ng-click="searchFood(term)">Search</md-button>
+            <md-button class="md-flat" ng-click="searchFood(term)">Search</md-button>
 
         </div>
         <div id="result">
 
         </div>
-
-
-
-
-
     </md-content>
+</div>
+
     <img src="assets/images/forest.png" class="homeImage land" ng-if="groundOneShow">
 
 

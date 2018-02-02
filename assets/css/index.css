@@ -55,16 +55,21 @@ label{
     font-family: 'Indie Flower', cursive;
 }
 /*Input text box*/
-md-content {
-    width: 50%;
+.panel {
+    width: 400px;
     margin: auto;
+    display: block;
     background-color: #F5FFFA;
 }
 
-md-content .inputTextbox{
-    width: 100%;
-    margin-left: 185px;
+.panel .inputTextbox {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15%;
+
 }
+
+
 
 
 
@@ -161,11 +166,11 @@ md-content .inputTextbox{
     font-weight: bold;
 }
 
-.happy .container_p p1{
+.happy .container_p .p1{
     font-family: 'Indie Flower', cursive;
 }
 
-.
+
 
 /*Panel 2 sad*/
 
@@ -205,15 +210,7 @@ md-content .inputTextbox{
 /*Media Queries*/
 
 @media (max-width: 1040px) {
-    md-content .inputTextbox{
-        margin: 0;
-    }
-    md-content .md-flat{
-        float: right;
-    }
-    md-button{
-        float: right;
-    }
+
 
 }
 .land.ng-leave.ng-leave-active {

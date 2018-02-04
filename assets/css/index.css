@@ -5,6 +5,9 @@ body {
     padding: 0;
     overflow: hidden;
 }
+md-content {
+    background-color: #F5FFFA;
+}
 
 .homeImage {
     width: 70%;
@@ -59,7 +62,6 @@ label{
     width: 400px;
     margin: auto;
     display: block;
-    background-color: #F5FFFA;
 }
 
 .panel .inputTextbox {
@@ -68,11 +70,6 @@ label{
     padding-left: 15%;
 
 }
-
-
-
-
-
 
 /* Animations */
 .land.ng-enter {
@@ -170,29 +167,13 @@ label{
     font-family: 'Indie Flower', cursive;
 }
 
-
-
-/*Panel 2 sad*/
-
-.sad .container_p{
-    width: 50%;
-    float: right;
-    margin-top: 50px;
-}
-
-.sad img{
-    width: 37%;
-    margin-left: 100px;
-}
-.sad p{
-    font-family: 'Indie Flower', cursive;
-    font-size: 30px;
-    font-weight: normal;
-}
 .description{
     text-align: center;
     width: 80%;
-    margin-left: 65px;
+    margin: auto;
+}
+.description.button{
+    margin-right:0;
 }
 
 .inputTextbox_2{
@@ -207,12 +188,6 @@ label{
     margin-left: 160px;
 }
 
-/*Media Queries*/
-
-@media (max-width: 1040px) {
-
-
-}
 .land.ng-leave.ng-leave-active {
     transition: 1s ease-in all;
     bottom: -300px;
